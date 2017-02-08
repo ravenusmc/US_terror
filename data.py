@@ -31,3 +31,11 @@ class Data():
         'terrorist plots or attacks'  )
         print()
         input('Press Enter to return to the main menu ')
+
+    #This method will allow the user to see attacks were a certain number of
+    #people were killed.
+    def deaths(self, number_deaths):
+        print('\033c')
+        self.__data = self.__data[self.__data.victims_killed >= number_deaths]
+        print(self.__data)
+        input('Hit enter to return to main menu ')

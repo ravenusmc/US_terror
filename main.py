@@ -21,13 +21,16 @@ def main():
 def main_menu():
     print('\033c')
     print('1. Look at plots by ideology')
-    print('2. Quit')
+    print('2. Look at attacks by victims killed')
+    print('3. Quit')
     choice = int(input('What is your choice: '))
     data = Data()
     support = Support()
     if choice == 1:
         idealogy(data)
     elif choice == 2:
+        kills(data)
+    elif choice == 3:
         support.quit()
 
 #This is where the user may select the idealogy to look at for terrorist attacks
@@ -47,5 +50,13 @@ def idealogy(data):
     elif choice == 2:
         data.idealogy_stats('Right Wing')
         main_menu()
+
+#This function will allow the user to look at attacks where a specific number
+#of people were killed.
+def kills(data):
+    print('\033c')
+    number_deaths = int(input('Please enter the number of deaths '))
+    data.deaths(number_deaths)
+    main_menu()
 
 main()
