@@ -18,30 +18,16 @@ class Data():
     def show(self):
         return self.__data
 
-    #This method will show the user the amount of right wing terrorist plots
-    #and attacks that were committed by Jihadist terrorists.
-    def jihadist(self):
+    #This method will show the user the amount of right wing or Jihadist
+    #terrorist plots and attacks.
+    def idealogy_stats(self, data_type):
         print('\033c')
-        print('Here is the data for right wing terrorism: ')
+        print('Here is the data for', data_type, 'terrorism: ')
         print()
         self.__total_deaths = len(self.__data)
-        self.__jihadist = self.__data[self.__data.plot_ideology == 'Jihadist']
+        self.__jihadist = self.__data[self.__data.plot_ideology == data_type]
         self.__jihadist = len(self.__jihadist)
-        print(self.__jihadist, 'out of', self.__total_deaths, 'were Right wing '\
-        'terrorist plots or attacks'  )
-        print()
-        input('Press Enter to return to the main menu ')
-
-    #This method will show the user the amount of right wing terrorist plots
-    #and attacks that were committed by right wing terrorists.
-    def right_wing(self):
-        print('\033c')
-        print('Here is the data for right wing terrorism: ')
-        print()
-        self.__total_deaths = len(self.__data)
-        self.__right_wing = self.__data[self.__data.plot_ideology == 'Right Wing']
-        self.__right_wing = len(self.__right_wing)
-        print(self.__right_wing, 'out of', self.__total_deaths, 'were Right wing '\
+        print(self.__jihadist, 'out of', self.__total_deaths, 'were', data_type, \
         'terrorist plots or attacks'  )
         print()
         input('Press Enter to return to the main menu ')

@@ -42,10 +42,10 @@ def idealogy(data):
         print('That was not a proper selection!')
         choice = int(input('What ideology do you want to see data for? '))
     if choice == 1:
-        data.jihadist()
+        data.idealogy_stats('Jihadist')
         main_menu()
     elif choice == 2:
-        data.right_wing()
+        data.idealogy_stats('Right Wing')
         main_menu()
 
 main()
