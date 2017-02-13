@@ -13,6 +13,11 @@ a background in International Relations and political science so I love to do
 these types of projects! It is a way for me to merge two of my passions
 together.
 
+One final comment, I noticed that the 2008 Mumbai, India terrorist attacks
+were in the CSV file. Not sure if other global terrorist attacks are in the
+file but I guess this is not for the US only. Thus, I am sorry for the bad
+name of calling this project US terrorist attacks. 
+
 
 # Getting started
 ### Installing / Requirements
