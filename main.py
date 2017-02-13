@@ -22,7 +22,8 @@ def main_menu():
     print('\033c')
     print('1. Look at plots by ideology')
     print('2. Look at attacks by victims killed')
-    print('3. Quit')
+    print('3. Look at prevented/not prevented attacks')
+    print('4. Quit')
     choice = int(input('What is your choice: '))
     data = Data()
     support = Support()
@@ -31,6 +32,8 @@ def main_menu():
     elif choice == 2:
         kills(data)
     elif choice == 3:
+        prevented(data)
+    elif choice == 4:
         support.quit()
 
 #This is where the user may select the idealogy to look at for terrorist attacks
@@ -40,6 +43,7 @@ def idealogy(data):
     print('\033c')
     print('1. Jihadist')
     print('2. Right Wing')
+    print('3. Left Wing')
     choice = int(input('What ideology do you want to see data for? '))
     while not two_valid(choice):
         print('That was not a proper selection!')
@@ -50,6 +54,8 @@ def idealogy(data):
     elif choice == 2:
         data.idealogy_stats('Right Wing')
         main_menu()
+    elif choice == 3:
+        data.idealogy_stats('Left Wing')
 
 #This function will allow the user to look at attacks where a specific number
 #of people were killed.
@@ -58,5 +64,12 @@ def kills(data):
     number_deaths = int(input('Please enter the number of deaths '))
     data.deaths(number_deaths)
     main_menu()
+
+#This function will look at the number of attacks that were prevented.
+def prevented(data):
+    print('\033c')
+    data.prevented()
+    main_menu()
+
 
 main()

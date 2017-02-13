@@ -39,3 +39,22 @@ class Data():
         self.__data = self.__data[self.__data.victims_killed >= number_deaths]
         print(self.__data)
         input('Hit enter to return to main menu ')
+
+    #This method will allow the user to see the number of attacks that were
+    #prevented versus not prevented
+    def prevented(self):
+        print('\033c')
+        total_attacks = len(self.__data)
+        print('\tHere is the data for prevented / not prevented:')
+        print()
+        print('\tThe total number of attacks is:',total_attacks)
+        prevented = len(self.__data[self.__data.plot_status == 'Prevented'])
+        not_prevented = len(self.__data[self.__data.plot_status == 'Not Prevented'])
+        print('\tThe total number of prevented attacks is:', prevented)
+        print('\tThe total number of prevented attacks is:', not_prevented)
+        print('''
+            Please note that there are not responses for all of the attacks. For
+        this reason the number of prevented and not prevented attacks will not
+        add up to the correct total.
+        ''')
+        input('Hit enter to return to main menu ')
