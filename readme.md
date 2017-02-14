@@ -16,7 +16,7 @@ together.
 One final comment, I noticed that the 2008 Mumbai, India terrorist attacks
 were in the CSV file. Not sure if other global terrorist attacks are in the
 file but I guess this is not for the US only. Thus, I am sorry for the bad
-name of calling this project US terrorist attacks. 
+name of calling this project US terrorist attacks.
 
 
 # Getting started
@@ -38,4 +38,5 @@ they want to look at in regards to police shootings.
 
 # Preview
 
-To see a video that talks about this project please go here: coming soon
+To see a video that talks about this project please go here:
+https://www.youtube.com/watch?v=utJQZTrWIoY
