@@ -56,6 +56,7 @@ def idealogy(data):
         main_menu()
     elif choice == 3:
         data.idealogy_stats('Left Wing')
+        main_menu()
 
 #This function will allow the user to look at attacks where a specific number
 #of people were killed.
@@ -70,6 +71,5 @@ def prevented(data):
     print('\033c')
     data.prevented()
     main_menu()
-
 
 main()
